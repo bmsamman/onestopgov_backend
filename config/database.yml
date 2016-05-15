@@ -22,4 +22,4 @@ test:
 
 production:
   <<: *default
-  database: one_stop_gov_production
+  database: db/production
