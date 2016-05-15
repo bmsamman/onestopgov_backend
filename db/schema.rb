@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160514235057) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -28,6 +31,7 @@ ActiveRecord::Schema.define(version: 20160514235057) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "services", ["category_id"], name: "index_services_on_category_id"
+  add_index "services", ["category_id"], name: "index_services_on_category_id", using: :btree
 
+  add_foreign_key "services", "categories"
 end
