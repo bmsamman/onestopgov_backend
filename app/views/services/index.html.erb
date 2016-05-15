@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Service Reference</th>
       <th>Description</th>
       <th>Fields</th>
       <th>Category</th>
@@ -17,6 +18,7 @@
     <% @services.each do |service| %>
       <tr>
         <td><%= service.name %></td>
+        <td><%= service.service_reference %></td>
         <td><%= service.description %></td>
         <td><%= service.fields %></td>
         <td><%= service.category.name %></td>

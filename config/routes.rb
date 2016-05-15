@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   namespace :services do
     resources :houston_alerts, only: [:create]
+    resources :renew_driver_licenses, only: [:create]
+    resources :renew_vehicle_registrations, only: [:create]
   end
 
   resources :services
